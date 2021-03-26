@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Surprise Conceito - Carrinho</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+	<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <header>
+    <div id="top-header">
+      <div class="container">
+        <ul class="header-links pull-left">
+          <li><a href="#"><i class="fa fa-phone"></i> +55 (85) 0000-000</a></li>
+          <li><a href="#"><i class="fa fa-envelope-o"></i> contato@surpriseconceito.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="header-logo">
+              <a href="index.html" class="logo">
+                <img src="img/surprise03.jpeg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="header-search">
+            </div>
+          </div>
+          <div class="col-md-3 clearfix">
+            <div class="header-ctn">
+              <div class="menu-toggle">
+                <a href="#">
+                  <i class="fa fa-bars"></i>
+                  <span>Menu</span>
+                </a>
+              </div>
+
+              <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                  <a href="carrinho.html"><i class="fa fa-shopping-cart"></i>
+                  <span>Carrinho</span>
+                  </a>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <nav id="navigation">
+
+    <div class="container">
+
+      <div id="responsive-nav">
+
+        <ul class="main-nav nav navbar-nav">
+          <li><a>Surprise Conceito &nbsp;<i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i></a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="canecas.html">Canecas</a></li>
+          <li><a href="caixas.html">Caixas</a></li>
+          <li><a href="cestas.html">Cestas</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=5585998541169&text=" target="_block" onclick="alert('Aguarde... Você sera redirecionado para nosso atendimento!')">Fale Conosco</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <div class="section">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="itens" id="itens" name="itens"> </div>
+        <div class="total" >&nbsp;&nbsp;&nbsp;&nbsp;Total: R$ <span id="total"></span> </div>
+        </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="primary-btn order-submit" type="button" onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+        </br>
+        </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="primary-btn order-submit" type="button" onclick="window.location.href='index.html'"> Voltar as Compras</button>
+        </br>
+        </br>
+        </br>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;Suas Informações: </h3>
+        </br>
+        <form action="fim.php" method="POST">
+          <label for="fname">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i> Nome completo</label></br> 
+          <input class="input" type="text" id="nome" name="nome" placeholder="Nome completo"></br></br>
+          <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope"></i> E-mail</label></br>
+          <input class="input" type="text" id="email" name="email" placeholder="Ex: clientesurprise@conceito.com"></br></br>
+          <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-address-card-o"></i> CPF</label></br>
+          <input class="input" type="text" id="cpf" name="cpf" placeholder="Ex: 000.000.000-00"></br></br>
+          <label for="city">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone"></i> Telefone</label></br>
+          <input class="input" type="text" id="telefone" name="telefone" placeholder="(85) 9.9999-9999"></br></br>  
+          <label for="adr">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-institution"></i> Endereço </label></br> 
+          <input class="input" type="text" id="endereco" name="endereco" placeholder="Ex: Rua Antonio Divino  N° 111"></br></br> 
+          <label for="city">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-institution"></i> CEP</label></br> 
+          <input class="input" type="text" id="cep" name="cep" placeholder="60711-540"></br> 
+          </br>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;Pagamento: </h3>
+          </br>
+          <label for="fname">&nbsp;&nbsp;&nbsp;&nbsp;Informe seu metodo de pagamento: </label></br></br>
+          <label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="cartao" value="Sim">&nbsp;&nbsp;Cartão de Crédito / Débito
+          </label>
+          </br>
+          <label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="deptfbanca" value="Sim">&nbsp;&nbsp;Depósito / Transferência Bancária
+          </label>
+          </br>
+          <label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="dinheiro" value="Sim">&nbsp;&nbsp;Dinheiro 
+          </label>
+          </br>
+          </br>
+          <label for="expyear">&nbsp;&nbsp;&nbsp;&nbsp;Precisa de troco? </label>&nbsp;
+          </br>
+          <input class="input" type="text" id="troco" name="troco" placeholder="Ex: Troco para R$ 100,00">
+          </br>
+          </br>
+          </br>
+          <input type="submit" class="primary-btn order-submit" value="Finalizar Pedido">
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+  
+	<script>
+		var total = 0; // variável que retorna o total dos produtos que estão na LocalStorage.
+		var i = 0;     // variável que irá percorrer as posições
+		var valor = 0; // variável que irá receber o preço do produto convertido em Float.
+		
+		for(i=1; i<=99; i++) // verifica até 99 produtos registrados na localStorage
+		{
+			var prod = localStorage.getItem("produto" + i + ""); // verifica se há recheio nesta posição. 
+			if(prod != null) 
+			{	
+				// exibe os dados da lista dentro da div itens
+				document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + "x ";
+				document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+				document.getElementById("itens").innerHTML += " ";
+				document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+				
+				// calcula o total dos recheios
+				valor = parseFloat(localStorage.getItem("valor" + i)); // valor convertido com o parseFloat()
+				total = (total + valor); // arredonda para 2 casas decimais com o .toFixed(2)
+			}
+		} 
+		// exibe o total dos recheios
+		document.getElementById("total").innerHTML = total.toFixed(2); 
+	</script>
+
+</br>
+	<footer id="footer">
+
+		<div class="section">
+
+		</div>
+
+		<div id="bottom-footer" class="section">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="newsletter">
+							<ul class="newsletter-follow">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+								</li>
+							</ul>
+						</div>
+						<span class="copyright">
+
+							Copyright &copy; Alth Devops | <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados
+
+						</span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

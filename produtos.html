@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Surprise Conceito - Canecas Personalizadas</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<script>
+			function AddCarrinho(produto, qtd, valor, posicao)
+			{
+				localStorage.setItem("produto" + posicao, produto);
+				localStorage.setItem("qtd" + posicao, qtd);
+				valor = valor * qtd;
+				localStorage.setItem("valor" + posicao, valor);
+				alert("Produto adicionado ao carrinho!");
+			}
+		</script>
+    </head>
+	<body>
+		<header>
+			<div id="top-header">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a href="#"><i class="fa fa-phone"></i> +55 (85) 0000-000</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> contato@surpriseconceito.com.br</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="index.html" class="logo">
+									<img src="img/surprise03.jpeg" alt="">
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="header-search">
+							</div>
+						</div>
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
+								</div>
+
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<a href="carrinho.html"><i class="fa fa-shopping-cart"></i>
+										<span>Carrinho</span>
+										</a>
+									</a>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</header>
+
+		<nav id="navigation">
+
+			<div class="container">
+
+				<div id="responsive-nav">
+					
+					<ul class="main-nav nav navbar-nav">
+						<li><a>Surprise Conceito &nbsp;<i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i></a></li>
+						<li><a href="index.html">Inicio</a></li>
+						<li class="active"><a href="produtos.html">Produtos</a></li>
+						<li><a href="canecas.html">Canecas</a></li>
+						<li><a href="caixas.html">Caixas</a></li>
+						<li><a href="cestas.html">Cestas</a></li>
+						<li><a href="https://api.whatsapp.com/send?phone=5585998541169&text=" target="_block" onclick="alert('Aguarde... Você sera redirecionado para nosso atendimento!')">Fale Conosco</a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+        </nav>
+        
+        <div id="breadcrumb" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="breadcrumb-tree">
+                            <li><a href="">Inicio</a></li>
+							<li><a href="#">Produtos&nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div id="aside" class="col-md-3">
+
+						<div class="aside">
+							<h3 class="aside-title">Categorias</h3>
+							<div class="checkbox-filter">
+
+								<div class="input-checkbox">
+                                    <a href="caixas.html">
+									<label for="category-1">
+										<span></span>
+										Caixas Personalizadas
+										<small>(14)</small>
+                                    </label>
+                                    </a>
+								</div>
+
+								<div class="input-checkbox">
+                                    <a href="cestas.html">
+									<label for="category-3">
+										<span></span>
+										Cestas Personalizadas
+										<small>(18)</small>
+                                    </label>
+                                    </a>
+								</div>
+
+								<div class="input-checkbox">
+                                    <a href="canecas.html">
+									<label for="category-4">
+										<span></span>
+										Canecas Personalizadas
+										<small>(27)</small>
+                                    </label>
+                                    </a>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div id="store" class="col-md-9">
+
+						<div class="row">
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="clearfix visible-sm visible-xs"></div>
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="clearfix visible-lg visible-md"></div>
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="clearfix visible-sm visible-xs"></div>
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
+
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+							<!-- /product -->
+
+							<!-- product -->
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+							<!-- /product -->
+
+							<div class="clearfix visible-sm visible-xs"></div>
+
+							<!-- product -->
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/canecas/canecas12.jpg" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Category</p>
+										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									</div>
+								</div>
+							</div>
+							<!-- /product -->
+						</div>
+						<!-- /store products -->
+					</div>
+					<!-- /STORE -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<footer id="footer">
+
+			<div class="section">
+
+			</div>
+
+			<div id="bottom-footer" class="section">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="newsletter">
+								<ul class="newsletter-follow">
+									<li>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-twitter"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+								</ul>
+							</div>
+							<span class="copyright">
+								
+								Copyright &copy; Alth Devops | <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados
+							
+							</span>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</footer>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
